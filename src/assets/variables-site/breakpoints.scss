@@ -1,0 +1,14 @@
+$screens: (
+		sm: 377px,
+		md: 770px,
+		lg: 1920px
+);
+
+$breakpoints: (
+		lg: "min-width: #{map-get($screens, lg)}",
+		md: "max-width: #{map-get($screens, md) - 1}",
+		sm: "max-width: #{map-get($screens, sm) - 1}",
+    more-md: "min-width: #{map-get($screens, md) - 1}",
+		more-sm: "min-width: #{map-get($screens, sm) - 1}",
+
+);

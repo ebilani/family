@@ -1,0 +1,44 @@
+@import "./../../styles.scss";
+.video{
+  position: relative;
+  .family-video{
+    height: 600px;
+    width: 700px;
+  }
+  img{
+    position: absolute;
+    background-color: rgb(87, 206, 230);
+    border-radius: 50%;
+
+    bottom: 8%;
+    left: 11%;
+  }
+
+  .play{
+    padding: #{$spacing-sm}px;
+  }
+}
+@include breakpoint(sm){
+  .video{
+    #play_pause{
+      bottom: 15% !important;
+      left: 8% !important;
+    }
+  }
+  #family{
+  width: 50vh !important;
+  height: 360px !important;
+  }
+}
+@include breakpoint(md){
+  .video{
+    img{
+      bottom: 13% !important;
+      left: 6% !important;
+    }
+  }
+  .family-video{
+    height: 460px !important;
+    width: 507px !important;
+  }
+}

@@ -1,0 +1,40 @@
+<div class="body-cnt">
+  <div class="main-container">
+      <div class="text-content">
+       <h3>Like every family,</h3>
+        <h3> we have a few values</h3>
+        <h3 class="second-header">that we hold dear</h3>
+       <div class="buttons">
+        <button id="btn" *ngFor="let tab of tabList" type="button" [ngClass]="{'isActive': tab.name === selectedTab}"  (click)="tabClick(tab.name)" class="btn custom-btn">{{tab.name}}</button>
+       </div>
+      </div>
+      <div class="text-header">
+        <div class="paragraph">
+          <h2>{{selectedTab}}</h2>
+          <h2 class="second-header">from day one</h2>
+          <p class="body-text">
+            As a household name that has <br>
+            been loved by all kind of families <br>
+            for generations, Silver Cross will <br>
+            always be right there, by your side.
+          </p>
+         </div>
+         <div class="btn-more">
+          <button class="btn"> Learn More</button>
+          <img src="./../../assets/icons/greyPlus.svg" alt="add">
+         </div>
+      </div>
+
+
+
+    <div class="image-content">
+       <div class="image" id="responsive-img">
+        <img *ngIf="selectedTab === 'Loved'" id="image" src="./../../assets/images/image1.jpg" alt="image1">
+        <img *ngIf="selectedTab === 'Trusted'"  id="image" src="./../../assets/gifs/gifExample.gif" alt="image1">
+        <app-video id="image" *ngIf="selectedTab === 'Crafted'"></app-video>
+       </div>
+       <span class="text-tab">{{selectedTab}}</span>
+    </div>
+ </div>
+</div>
+
